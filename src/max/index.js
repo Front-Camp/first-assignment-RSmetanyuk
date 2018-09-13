@@ -8,7 +8,10 @@
 */
 const max = arr => {
   var res = 0;
-  if (arr.length) 
+  for (var i=0; i<arr.length; i++) {
+  	if (!isFinite(arr[i])) i++;
+  	if (arr[i]>res) res=arr[i];
+  }
   return res;
 };
 

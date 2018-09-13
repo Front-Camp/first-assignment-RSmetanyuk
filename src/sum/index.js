@@ -10,7 +10,13 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-  /* your logic here...*/
+  if (isNaN(a) || isNaN(b)) {
+   	
+
+   	
+  } else {
+  	return a+b;
+  }  
 };
 
 export default sum;

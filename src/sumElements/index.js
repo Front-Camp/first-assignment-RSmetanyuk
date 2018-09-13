@@ -12,10 +12,10 @@
  */
 const sumElements = arr => {
     var sum = 0;
-    for (var i = 0; i < arr.length; i++) {
-      if (!isNaN(arr[i]) && !isFinite(arr[i]) {
-      	sum += parseInt(arr[i]);
-      }      
+		for (var i = 0; i < arr.length; i++) {
+			if (!isFinite(arr[i])) i++;
+			sum += parseInt(arr[i]);
+      	}      
     };
     return sum;
 };
