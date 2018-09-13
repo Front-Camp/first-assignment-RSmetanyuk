@@ -10,16 +10,11 @@
 const truncate = (str, length = 0, replacer = '...') => {
  	if (str === "") {
  		return "";
- 	} else if (str.lengt > length) {
-		var res = str.substring(0, length-3);
-		replacer !== "" ? replacer = replacer : replacer = "...";
-		res.concat(replacer);
-		return res;
+ 	} else if (str.length > length) {
+		return str.slice(0, length-3).concat(replacer);
 	} else {
 		return str;
 	}
-
-  /* your logic here...*/
 };
 
 export default truncate;
