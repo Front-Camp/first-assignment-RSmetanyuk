@@ -11,9 +11,11 @@
 */
 const sum = (a, b) => {
   if (isNaN(a) || isNaN(b)) {
-   	
-
-   	
+   	throw "At least one of arguments is NaN";   	
+  } else if (!isFinite(a) || !isFinite(b)) {
+	throw "At least one of arguments is Infinity!";  
+  } else if (typeof a != 'number' || typeof b != 'number') {
+  	throw "At least one of arguments is not a number";
   } else {
   	return a+b;
   }  
